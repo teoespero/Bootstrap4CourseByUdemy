@@ -1,0 +1,53 @@
+<!-- 	
+	Teo Espero
+	BS Cloud and Systems Administration
+	Western Governors University-
+	#Web-Dev-Bootcamp-Udemy
+-->
+
+<! DOCTYPE html>
+<html lang="en">
+<html>
+	<head>	
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="normalize.css" rel="stylesheet" type="text/css">
+			<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+			<link href="bootstrap.css" rel="stylesheet" type="text/css">
+			<link href="galery.css" rel="stylesheet" type="text/css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+			<script type="text/javascript" src="bootstrap.js"></script>
+			<meta charset="utf-8">
+			<meta charset="utf-8">
+			<title>teoespero.com | Javascript Programming - Arrays, Objects and Methods</title>
+			<meta name="description" content="">
+  			<meta name="author" content="teoespero">
+  
+	</head>
+	<body>
+		<div class="container">
+			<h1>Movie Listing</h1>
+			<script type="text/javascript">
+			var movies = {
+							title: ["Red Sparrow", "Wonder", "Wedding Crashers", "The Internship", "Starsky & Hutch", "Meet the Fockers",],
+							hasWatched: [true, true, false, true, true, true],
+							rating: [6.6,8.0,7.0,6.3,6.1,6.3],					
+							percentage:function(movieRating,scale){
+								return (movieRating/scale) * 100;
+							}
+						}
+					
+			var movieTitle = "";
+			var theRating = 0.0;
+			for (counter = 0; counter < movies.title.length; counter++){
+				movieTitle = movies.title[counter];
+				theRating = (movies.percentage(movies.rating[counter],10));
+				document.write("<p>");
+				document.write("<b>Movie title: </b>" + movieTitle + "<br>");
+				document.write("<b>IMDB Rating: </b>" + theRating.toFixed(2) + "<br>");
+				document.write("</p>");
+			}
+			</script>
+		</div>
+	</body>
+</html>
